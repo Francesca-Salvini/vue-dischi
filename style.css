@@ -1,0 +1,65 @@
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: rgb(46, 58, 70);
+    padding: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+}
+
+main {
+    background-color: #1e2e3c;
+    
+}
+
+.cd_container {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cd {
+    width: calc( ( 100% / 6 ) - 80px );
+    text-align: center;
+    background-color: rgb(46, 58, 70);
+    padding: 20px;
+    margin: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* .cd img {
+    width: 100px;
+    height: auto;
+} */
+
+.cd-title {
+    text-transform: uppercase;
+    color: white;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.cd-author, .cd-year {
+    font-size: 18px;
+    color: gray;
+}
