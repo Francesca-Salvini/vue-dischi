@@ -28,7 +28,7 @@
             <div class="select-genre">
                 <label for="genres">Choose a genre:</label>
                 <select  name="genre" id="genre">
-                    <option v-for="cd in cds" value="">{{ cd.genre }}</option>
+                    <option v-for="genre in cdsGenres" value="">{{genre}}</option>
                 </select>
             </div>
         </header>

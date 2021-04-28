@@ -16,20 +16,15 @@ var app = new Vue (
         el: '#root',
         data : {
             
-            
+            cds : [],
+            cdsGenres : []
             
         },
         methods : {
         
         },
         
-        data() {
-            return  {
-                cds : [],
-                cdsGenres : []
-            }
-        }, 
-       
+        
         mounted() {
             axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -38,7 +33,16 @@ var app = new Vue (
                 console.log(result);
                 this.cds = result.response;
                 
-                this.cdsGenres = result.filter(cds => cds.department.includes('genre'))
+                // Inserisco nell'array cdsGenres i generi musicali dei cd contenuti in cds
+                this.cds.forEach((element) => {
+                    // console.log(element.genre);
+                    if(!this.cdsGenres.includes(element.genre)) {
+                        this.cdsGenres.push(element.genre);
+                    }
+                    
+                    
+                })
+
                 console.log(this.cdsGenres);
             });
             
