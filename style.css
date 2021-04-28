@@ -17,12 +17,23 @@ img {
 header {
     background-color: rgb(46, 58, 70);
     padding: 10px;
+    display: flex;
 }
 
 .logo {
     width: 50px;
     height: 50px;
 
+}
+
+.select-genre {
+    margin: auto;
+    color: #1bd760;
+    text-transform: uppercase;
+}
+
+.select-genre select {
+    color: grey;
 }
 
 main {
@@ -46,11 +57,6 @@ main {
     margin: 0 20px;
     margin-bottom: 20px;
 }
-
-/* .cd img {
-    width: 100px;
-    height: auto;
-} */
 
 .cd-title {
     text-transform: uppercase;

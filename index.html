@@ -24,6 +24,13 @@
     <div id="root">
         <header>
             <img class="logo" src="img/download.png" alt="Logo Spotify">
+
+            <div class="select-genre">
+                <label for="genres">Choose a genre:</label>
+                <select  name="genre" id="genre">
+                    <option v-for="cd in cds" value="">{{ cd.genre }}</option>
+                </select>
+            </div>
         </header>
 
         <main>
