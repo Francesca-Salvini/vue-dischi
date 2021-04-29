@@ -1,3 +1,6 @@
+
+/*jshint esversion: 6 */
+/*jshint esversion: 9 */
 // CONSEGNA
 
 // ESERCIZIO : Attraverso una chiamata ajax all’API di boolean 
@@ -17,11 +20,13 @@ var app = new Vue (
         data : {
             
             cds : [],
-            cdsGenres : []
+            cdsGenres : [],
+            selectedGenre : '',
+            cdsYear : []
             
         },
         methods : {
-        
+            
         },
         
         
@@ -38,12 +43,24 @@ var app = new Vue (
                     // console.log(element.genre);
                     if(!this.cdsGenres.includes(element.genre)) {
                         this.cdsGenres.push(element.genre);
+
+                        
                     }
                     
                     
+                    // this.cdsYear.push(element.year);
+
                 })
 
                 console.log(this.cdsGenres);
+
+                console.log(this.cdsYear);
+                
+                // metto in ordine gli anni dal più lontano al più recente nell'array cdsYear
+                this.cds.sort((a, b) => a.year - b.year);
+                console.log(this.cds);
+                
+                
             });
             
             

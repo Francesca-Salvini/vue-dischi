@@ -37,6 +37,7 @@ header {
 }
 
 main {
+    height: 100vh;
     background-color: #1e2e3c;
     
 }

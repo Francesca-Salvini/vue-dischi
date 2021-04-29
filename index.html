@@ -25,18 +25,22 @@
         <header>
             <img class="logo" src="img/download.png" alt="Logo Spotify">
 
+            <!--Select genre-->
             <div class="select-genre">
                 <label for="genres">Choose a genre:</label>
-                <select  name="genre" id="genre">
-                    <option v-for="genre in cdsGenres" value="">{{genre}}</option>
+                <select  v-model="selectedGenre"  name="genre" id="genre">
+                    <option  value="">All</option>
+                    <option v-for="genre in cdsGenres" :value="genre">{{genre}}</option>
                 </select>
+                
             </div>
+            <!--Fine Select genre-->
         </header>
 
         <main>
             <div class="cd_container">
                 <!--singolo cd-->
-                <div v-for="cd in cds" class="cd">
+                <div v-for="cd in cds" class="cd" v-if="cd.genre == selectedGenre || selectedGenre == ''">
                     <img :src="cd.poster" alt="">
                     <div class="cd-title">{{ cd.title }}</div>
                     <div class="cd-author">{{ cd.author }}</div>
